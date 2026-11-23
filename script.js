@@ -95,7 +95,7 @@ async function handleInlineContactSubmit(e) {
   const nature = document.getElementById('inquiryNature') ? document.getElementById('inquiryNature').value : 'Freelance';
   const name = document.getElementById('inlineName').value;
   const email = document.getElementById('inlineEmail').value;
-  const phone = document.getElementById('inlinePhone').value;
+  const phone = (document.getElementById('inlinePhone') && document.getElementById('inlinePhone').value.trim()) || 'Not provided';
   const message = document.getElementById('inlineMessage').value;
 
   const payload = {
