@@ -206,7 +206,7 @@
 
             <div class="service-card-footer">
               <div class="service-price-note">Mode: <strong>Online</strong> • Individual Coaching</div>
-              <a href="#contact" class="btn btn-wine-full">Request this service</a>
+              <button type="button" class="btn btn-wine-full" onclick="openContactModal('Spoken English Training')">Request this service</button>
             </div>
           </div>
 
@@ -247,7 +247,7 @@
 
             <div class="service-card-footer">
               <div class="service-price-note">Mode: <strong>Remote Only</strong> • Contract & Freelance</div>
-              <a href="#contact" class="btn btn-wine-full">Request this service</a>
+              <button type="button" class="btn btn-wine-full" onclick="openContactModal('Voice Interpretation')">Request this service</button>
             </div>
           </div>
 
@@ -288,7 +288,7 @@
 
             <div class="service-card-footer">
               <div class="service-price-note">Mode: <strong>Remote Delivery</strong> • Research-Grade Quality</div>
-              <a href="#contact" class="btn btn-wine-full">Request this service</a>
+              <button type="button" class="btn btn-wine-full" onclick="openContactModal('Translation')">Request this service</button>
             </div>
           </div>
 
@@ -738,6 +738,43 @@
     </section>
   </main>
 
+  <!-- MODAL: SERVICE REQUEST DIALOG -->
+  <div id="contactModal" class="modal-backdrop" onclick="handleModalBackdrop(event)" role="dialog" aria-modal="true" aria-labelledby="modalServiceTitle">
+    <div class="modal-dialog">
+      <button type="button" class="modal-close" onclick="closeContactModal()" aria-label="Close dialog">&times;</button>
+      <span class="modal-eyebrow">SERVICE REQUEST</span>
+      <h3 id="modalServiceTitle" class="modal-title">Request Service</h3>
+      <p class="modal-subtitle">Leave your details and project requirements. We'll call you back soon.</p>
+
+      <form id="serviceRequestForm" class="modal-form" onsubmit="handleFormSubmit(event)">
+        <input type="hidden" id="requestedService" name="service" value="Translation & Interpretation">
+
+        <div class="form-group">
+          <label for="clientName">Your Name</label>
+          <input type="text" id="clientName" name="name" required placeholder="Your full name or organization">
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="clientEmail">Email Address</label>
+            <input type="email" id="clientEmail" name="email" required placeholder="name@company.com">
+          </div>
+          <div class="form-group">
+            <label for="clientPhone">Phone Number <span style="font-weight: 400; opacity: 0.65; font-size: 0.85em;">(Optional)</span></label>
+            <input type="tel" id="clientPhone" name="phone" placeholder="+91 98765 43210 (optional)">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="clientMessage">Project Details / Scope</label>
+          <textarea id="clientMessage" name="message" rows="3" placeholder="Languages, approximate word count, timeline, or meeting dates..."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-wine-full" style="width: 100%; padding: 0.85rem; font-size: 0.95rem; font-weight: 600;">Submit Request</button>
+      </form>
+    </div>
+  </div>
+
   <!-- FOOTER -->
   <footer class="site-footer">
     <div class="site-container footer-content">
@@ -750,6 +787,6 @@
     </div>
   </footer>
 
-  <script src="script.js?v=5"></script>
+  <script src="script.js?v=6"></script>
 </body>
 </html>
