@@ -1067,6 +1067,16 @@ a.id-detail-row:hover {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+.lang-text {
+  flex: 1;
+  text-align: left;
+}
+
+.lang-target {
+  flex: 1;
+  text-align: right;
+}
+
 .lang-pill:hover {
   transform: translateX(4px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
@@ -2103,6 +2113,11 @@ a.id-detail-row:hover {
     margin: 0 auto;
   }
 
+  .services-intro {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
   .services-cards-grid {
     grid-template-columns: 1fr;
   }
@@ -2114,6 +2129,11 @@ a.id-detail-row:hover {
   .craft-layout {
     grid-template-columns: 1fr;
     gap: 2.5rem;
+  }
+
+  .lang-pairs-full-card {
+    grid-template-columns: 1fr;
+    gap: 2rem;
   }
 
   .expertise-cards-grid {
@@ -2283,6 +2303,12 @@ a.id-detail-row:hover {
     padding-bottom: 3.5rem;
   }
 
+  .services-intro {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    margin-bottom: 2rem;
+  }
+
   .services-cards-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
@@ -2323,6 +2349,42 @@ a.id-detail-row:hover {
   .expertise-section {
     padding-top: 3rem;
     padding-bottom: 3.5rem;
+  }
+
+  /* Bidirectional Language Pairs Card */
+  .lang-pairs-full-card {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1.6rem 1.35rem;
+    border-radius: 18px;
+    margin-bottom: 1.75rem;
+  }
+
+  .lang-pairs-info .detail-card-desc {
+    margin-bottom: 0;
+    font-size: 0.88rem;
+    line-height: 1.6;
+  }
+
+  .lang-pills-list {
+    width: 100%;
+    gap: 0.65rem;
+  }
+
+  .lang-pill {
+    padding: 0.75rem 1.15rem;
+    font-size: 0.84rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .lang-pill:hover {
+    transform: none;
+  }
+
+  .lang-arrow-bidirectional {
+    font-size: 1.15rem;
+    padding: 0 0.4rem;
   }
 
   .expertise-cards-grid {
@@ -2509,6 +2571,11 @@ a.id-detail-row:hover {
     right: 0.9rem;
     font-size: 1.4rem;
   }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0.85rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -2535,6 +2602,21 @@ a.id-detail-row:hover {
 
   .metric-number {
     font-size: 1.6rem;
+  }
+
+  .lang-pairs-full-card {
+    padding: 1.35rem 1.15rem;
+    gap: 1.25rem;
+  }
+
+  .lang-pill {
+    padding: 0.65rem 0.85rem;
+    font-size: 0.78rem;
+  }
+
+  .lang-arrow-bidirectional {
+    font-size: 1rem;
+    padding: 0 0.25rem;
   }
 
   .inquiry-nature-pills {
